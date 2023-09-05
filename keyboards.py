@@ -1,4 +1,4 @@
-from telegram import KeyboardButton, ReplyKeyboardMarkup
+from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 WELCOME_KEYBOARD = ReplyKeyboardMarkup(
@@ -46,4 +46,15 @@ FEEDBACK_KEYBOARD = ReplyKeyboardMarkup(
         ]
     ],
     resizable_keyboard=True,
+)
+
+LANGUAGE_KEYBOARD = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="UZ", callback_data="uz"),
+        ],
+        [
+            InlineKeyboardButton(text="RU", callback_data="ru"),
+        ]
+    ]
 )

@@ -14,6 +14,7 @@ from handlers import (
     about,
     feedback,
     star5,
+    language,
 )
 
 
@@ -35,6 +36,7 @@ def main():
     dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("😊Menga hamma narsa yoqdi, 5 ❤️"), callback=star5))
     dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("ℹ️ Ma'lumot"), callback=about))
     dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("✍️ Izoh qoldirish"), callback=feedback))
+    dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("🌐 Tilni tanlash"), callback=language))
 
     # start the bot
     updater.start_polling()
