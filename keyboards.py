@@ -35,3 +35,15 @@ ABOUT_KEYBOARD = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True,
 )
+
+FEEDBACK_KEYBOARD = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="😊Menga hamma narsa yoqdi, 5 ❤️"),
+        ],
+        [
+            KeyboardButton(text="☺️Yaxshi, 4 ⭐️⭐️⭐️⭐️"),
+        ]
+    ],
+    resizable_keyboard=True,
+)

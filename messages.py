@@ -13,3 +13,6 @@ O‘zbekiston bo'ylab yetkazib berish - 30 000 so‘m.
 
 Agar bu shartlar sizni qoniqtirsa, “🔥 Mahsulotlar” bo'limiga o'tish orqali buyurtma berishni boshlashingiz mumkin.'''
 
+COMMENT_MESSAGE = '''✅ <b>Tirikchilik</b> loyihasini tanlaganingiz uchun rahmat.
+Bizning xizmatlarimiz sifatini yaxshilashga yordam bersangiz juda xursand bo’lar edik :)
+Buning uchun 5 ballik tizim asosida bizni baholang yoki o'z tilaklaringizni yozib jo'nating.'''

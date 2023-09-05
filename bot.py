@@ -12,6 +12,8 @@ from telegram.ext import (
 from handlers import (
     start,
     about,
+    feedback,
+    star5,
 )
 
 
@@ -30,7 +32,9 @@ dispatcher: Dispatcher = updater.dispatcher
 def main():
     # add the handlers
     dispatcher.add_handler(handler=CommandHandler(command="start", callback=start))
+    dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("😊Menga hamma narsa yoqdi, 5 ❤️"), callback=star5))
     dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("ℹ️ Ma'lumot"), callback=about))
+    dispatcher.add_handler(handler=MessageHandler(filters=Filters.text("✍️ Izoh qoldirish"), callback=feedback))
 
     # start the bot
     updater.start_polling()
