@@ -95,3 +95,29 @@ def language(update: Update, context: CallbackContext) -> None:
         reply_markup=keyboards.LANGUAGE_KEYBOARD,
         parse_mode="HTML",
     )
+
+
+def choose_language(update: Update, context: CallbackContext) -> None:
+    """this function will be called when the user presses "ℱｍ Izoh qoldirish" button
+
+    Args:
+        update (Update): udpater object that contains the update info.
+        
+        context (CallbackContext): context object that contains the bot info.
+    """
+    # get calback data from the update
+    callback_data = update.callback_query.data
+    
+    if callback_data == 'uz':
+        update.callback_query.message.reply_text(
+            text="""siz uzbek tilini tanladingiz""",
+            reply_markup=keyboards.WELCOME_KEYBOARD,
+            parse_mode="HTML",
+            )
+    
+    if callback_data == 'ru':
+        update.callback_query.message.reply_text(
+            text="""Пожалуйста, выберите язык""",
+            reply_markup=keyboards.WELCOME_KEYBOARD,
+            parse_mode="HTML",
+            )
